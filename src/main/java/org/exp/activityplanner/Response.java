@@ -1,34 +1,41 @@
 package org.exp.activityplanner;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class Response {
-    int temp;
-    String description;
-    String place;
+
+    int count;
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    String errorMessage;
+    List<ActivityResponse> activities = new ArrayList<>();
 
     public Response() {
 
     }
-    public int getTemp() {
-        return temp;
+
+
+    public int getCount() {
+        return count;
     }
 
-    public void setTemp(int temp) {
-        this.temp = temp;
+    public void setCount(int count) {
+        this.count = count;
     }
 
-    public String getDescription() {
-        return description;
+    public List<ActivityResponse> getActivities() {
+        return activities;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getPlace() {
-        return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place;
+    public void setActivities(List<ActivityResponse> activities) {
+        this.activities = activities;
     }
 }
